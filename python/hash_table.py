@@ -83,8 +83,10 @@ class Solution:
         return ans
 
 
+# Uncomment one of them to test
+
 # print(Solution().checkIfPangram('thequickbrownfoxjumpsoverthelazydoe'))
 # print(Solution().missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]))
 # print(Solution().countElements([1, 1, 3, 3, 5, 5, 7, 7]))
 # print(Solution().intersection([[1, 4, 2, 3], [1, 8, 3, 2, 4], [15, 4, 5, 3, 2]]))
-print(Solution().findWinners([[2, 3], [1, 3], [5, 4], [6, 4]]))
+# print(Solution().findWinners([[2, 3], [1, 3], [5, 4], [6, 4]]))
