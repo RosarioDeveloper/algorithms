@@ -1,18 +1,13 @@
 
 // Given an interger value, generate the fibonacci sequence
 function finbonacci(value) {
-   let count = 0;
-   let curr = 1;
+   let fib = [0, 1]
 
-   let ans = [0]
-
-   for (let i = 0; i < value; i++) {
-      curr = count + curr;
-      ans.push(curr)
-      count = ans[ans.length - 2]
+   for (let i = 2; i < value; i++) {
+      fib.push(fib[i -1 ] + fib[i - 2])
    }
 
-   return ans;
+   return fib;
 }
 
 const result = finbonacci(59);
