@@ -1,19 +1,23 @@
-
 // Given an interger value, generate the fibonacci sequence
 function finbonacci(value) {
-   let count = 0;
-   let curr = 1;
+   let fib = [0, 1];
+   let negFib = [];
 
-   let ans = [0]
-
-   for (let i = 0; i < value; i++) {
-      curr = count + curr;
-      ans.push(curr)
-      count = ans[ans.length - 2]
+   for (let i = 2; i <= Math.abs(value); i++) {
+      fib.push(fib[i - 1] + fib[i - 2]);
    }
 
-   return ans;
+   if(value < 0){
+      for (let i = Math.abs(value); i >= 0; i--) {
+         negFib.push((-1) ** (i + 1) * fib[i]);
+      }
+   }
+   
+   return [...negFib, ...fib];
 }
 
-const result = finbonacci(59);
-console.log(result)
+const result = finbonacci(5);
+console.log(result);
+
+// Positive: F(5) = f[n - 1] + f[n - 2]
+// Nagative: F(-n) = (-1)ˆn+1 * f[n]

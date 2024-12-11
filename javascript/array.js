@@ -26,9 +26,11 @@ function transposeMatrix(matrix) {
    return res;
 }
 
-transposeMatrix([
+const result = transposeMatrix([
    [0, 4, 2, 42],
    [-1, 5, 3, 100],
    [-2, 6, -2, 30],
    [-3, 7, -3, -42],
 ]);
+
+console.log(result);
